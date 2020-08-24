@@ -12,7 +12,7 @@ def callback(data):
     rospy.loginfo(data.data)
 
 
-def listener():
+def name_listener():
 
     # Declare the subscriber to subscribe the topic talker which publishes string
     # message
@@ -28,4 +28,4 @@ def listener():
 
 
 if __name__ == '__main__':
-    listener()
+    name_listener()

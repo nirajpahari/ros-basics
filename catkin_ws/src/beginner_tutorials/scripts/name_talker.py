@@ -4,7 +4,7 @@ import rospy
 from std_msgs.msg import String
 
 
-def talker():
+def name_talker():
 
     # Create a publisher object -> Publisher(<topic name>, <message type>, queue_size)
     publisher = rospy.Publisher("talker", String, queue_size=10)
@@ -18,7 +18,7 @@ def talker():
     # Publish until the node is not closed
     while not rospy.is_shutdown():
 
-        message = "Hello this is the message from talker"
+        message = "John Doe"
 
         # publish the message
         publisher.publish(message)
@@ -32,6 +32,6 @@ def talker():
 
 if __name__ == '__main__':
     try:
-        talker()
+        name_talker()
     except rospy.ROSInterruptException:
         pass
